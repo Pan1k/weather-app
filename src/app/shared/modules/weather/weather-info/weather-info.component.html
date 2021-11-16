@@ -1,0 +1,28 @@
+<div class="weather-info">
+  <div class="weather-info__info-list">
+    <div class="weather-info__info-list-item">
+      <strong>Feels like:</strong>
+      <span *ngIf="weather.main.feels_like">{{ weather.main.feels_like }}</span>
+    </div>
+    <!--<div class="weather-info__info-list-item">
+      <strong>Wind speed:</strong> {{ weather.windSpeed }} {{ measureOfWindSpeed }}
+    </div>
+    <div class="weather-info__info-list-item">
+      <strong>Humidity:</strong>
+      <span *ngIf="weather.humidity">{{ weather.humidity }}%</span>
+    </div>
+    <div class="weather-info__info-list-item">
+      <strong>Pressure:</strong> {{ weather.pressure }} {{ measureOfPressure }}
+    </div>
+  </div>-->
+  <div class="weather-info__info-list">
+    <!--<div class="weather-info__info-list-item">
+      <strong>Cloudiness:</strong> {{ weather.description }}
+    </div>-->
+    <div class="weather-info__info-list-item">
+      <strong>Sunrise:</strong> {{ weather.sys?.sunrise | date: 'HH:mm' }}
+    </div>
+    <div class="weather-info__info-list-item">
+      <strong>Sunset:</strong> {{ weather.sys?.sunset | date: 'HH:mm' }}</div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.weather {
+
+  &-container {
+    max-width: 700px;
+    margin: 30px auto 20px;
+    box-shadow: 0 1px 4px #333;
+  }
+
+  &__divider {
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    margin: 16px auto;
+  }
+}

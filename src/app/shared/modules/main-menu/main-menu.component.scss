@@ -1,0 +1,38 @@
+nav {
+  .main-menu {
+    display: flex;
+    list-style-type: none;
+
+    &__item {
+      margin: 0 10px;
+    }
+
+    &__link {
+      position: relative;
+      display: inline-block;
+      color: #333;
+      text-decoration: none;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: #04b745;
+        bottom: -4px;
+        transition: width .3s 0s;
+      }
+
+      &:hover {
+        color: #04b745;
+      }
+
+      &:hover, &.active {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

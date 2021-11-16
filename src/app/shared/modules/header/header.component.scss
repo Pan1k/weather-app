@@ -1,0 +1,12 @@
+header {
+  box-shadow: 0 0 5px #333;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="weather">
+  <app-weather-settings></app-weather-settings>
+  <div class="weather-container">
+    <app-weather-daily [weather]="weather" [unitMeasure]="unitMeasure"></app-weather-daily>
+    <div class="weather__divider"></div>
+    <app-weather-info [weather]="weather"></app-weather-info>
+    <div class="weather__divider"></div>
+    <app-weather-weekly [city]="weather.name" [unitMeasure]="unitMeasure"></app-weather-weekly>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.weather-info {
+
+  &__info-list {
+    margin: 0 9%;
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      color: #656565;
+      font-size: 14px;
+    }
+  }
+
+}

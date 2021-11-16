@@ -1,0 +1,9 @@
+<div class="auth-widget">
+  <ng-container *ngIf="!isUserAuthorized">
+    <a routerLink="/auth">Login</a>
+  </ng-container>
+  <ng-container *ngIf="isUserAuthorized">
+    <p>Hello, User</p>
+    <a routerLink="/">Logout</a>
+  </ng-container>
+</div>

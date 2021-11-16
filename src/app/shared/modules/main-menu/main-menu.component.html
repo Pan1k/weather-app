@@ -1,0 +1,9 @@
+<nav>
+  <ul class="main-menu">
+    <li class="main-menu__item" *ngFor="let link of mainMenuItems">
+      <a [routerLink]="link.url" [routerLinkActive]="['active']" class="main-menu__link">
+        {{link.title}}
+      </a>
+    </li>
+  </ul>
+</nav>
