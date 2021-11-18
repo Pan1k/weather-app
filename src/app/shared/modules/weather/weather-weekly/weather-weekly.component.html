@@ -1,7 +1,7 @@
 <div class="weather-weekly">
   <div class="weather-weekly__list">
     <div class="weather-weekly__list-item" *ngFor="let item of weekWeather">
-      <span>{{item.date | date: 'EEE dd MMM'}}</span>
+      <span>{{item.date | date: 'EEE dd MMM HH:mm'}}</span>
       <span data-deg="°" [attr.data-unit]="measureOfTemp" class="weather-weekly__list-item--temp">{{item.temperatureDay}}</span>
       <span data-deg="°" [attr.data-unit]="measureOfTemp" class="weather-weekly__list-item--temp">{{item.temperatureNight}}</span>
       <span>{{item.description}}</span>

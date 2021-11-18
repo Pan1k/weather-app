@@ -18,7 +18,7 @@ export class WeatherWeeklyComponent implements OnInit {
   constructor(private weatherWeeklyService: WeatherWeeklyService) {
     this.unitMeasure = '';
     this.measureOfTemp = '';
-    this.weekWeather = new Array();
+    this.weekWeather = [];
   }
 
   ngOnInit(): void {
