@@ -3,12 +3,6 @@ import { IWeatherFormated } from '../../../interfaces/weather.interface';
 import { apiConfig } from '../../../../app.confg';
 import { WEATHER_FORMATED } from '../../../objects/weather.object';
 
-interface IUnits {
-  temperature: string;
-  windSpeed: string;
-  pressure: string;
-}
-
 @Component({
   selector: 'app-weather-daily',
   templateUrl: './weather-daily.component.html',

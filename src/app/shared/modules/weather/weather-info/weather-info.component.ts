@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IWeatherFormated } from '../../../interfaces/weather.interface';
 import { WEATHER_FORMATED } from '../../../objects/weather.object';
 import { apiConfig } from '../../../../app.confg';
-import { IMeasureArr } from '../../../interfaces/measure.interface';
 
 @Component({
   selector: 'app-weather-info',
@@ -16,15 +15,15 @@ export class WeatherInfoComponent implements OnInit {
   measureOfTemp: string;
   measureOfWindSpeed: string;
   measureOfPressure: string;
-  unitMeasure: string = 'metric';
 
   constructor() {
-    this.weather = WEATHER_FORMATED;
+    const measurementUnits = apiConfig.measurementUnits['metric'];
 
-    const measurementUnits = apiConfig.measurementUnits[this.unitMeasure];
     this.measureOfTemp = measurementUnits.temperature;
     this.measureOfWindSpeed = measurementUnits.windSpeed;
     this.measureOfPressure = measurementUnits.pressure;
+
+    this.weather = WEATHER_FORMATED;
   }
 
   ngOnInit(): void {
