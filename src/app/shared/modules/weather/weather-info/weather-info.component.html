@@ -5,7 +5,7 @@
       <span *ngIf="weather.windDirection">{{ weather.windDirection | lowercase }}, </span>
       {{ weather.windBeaufortScale | lowercase }}
     </div>
-    <!--<div class="weather-info__info-list-item">
+    <div class="weather-info__info-list-item">
       <strong>Wind speed:</strong> {{ weather.windSpeed }} {{ measureOfWindSpeed }}
     </div>
     <div class="weather-info__info-list-item">
@@ -14,16 +14,16 @@
     </div>
     <div class="weather-info__info-list-item">
       <strong>Pressure:</strong> {{ weather.pressure }} {{ measureOfPressure }}
-    </div>-->
+    </div>
   </div>
   <div class="weather-info__info-list">
-    <!--<div class="weather-info__info-list-item">
-      <strong>Cloudiness:</strong> {{ weather.description }}
-    </div>-->
     <div class="weather-info__info-list-item">
-      <!--<strong>Sunrise:</strong> {{ weather.sys?.sunrise | date: 'HH:mm' }}-->
+      <strong>Cloudiness:</strong> {{ weather.description }}
     </div>
     <div class="weather-info__info-list-item">
-      <!--<strong>Sunset:</strong> {{ weather.sys?.sunset | date: 'HH:mm' }}</div>-->
+      <strong>Sunrise:</strong> {{ weather.sunrise | date: 'HH:mm' }}
+    </div>
+    <div class="weather-info__info-list-item">
+      <strong>Sunset:</strong> {{ weather.sunset | date: 'HH:mm' }}</div>
   </div>
 </div>

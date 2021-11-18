@@ -1,11 +1,13 @@
 .weather-info {
+  display: flex;
+  justify-content: center;
 
   &__info-list {
     margin: 0 9%;
 
     &-item {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       color: #656565;
       font-size: 14px;
 

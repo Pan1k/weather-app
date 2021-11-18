@@ -68,9 +68,4 @@ export class WeatherService {
   getWeatherByCity(city: string): Observable<any> {
     return this.httpClient.get(`${apiConfig.host}/weather?appid=${apiConfig.appId}&q=${city}&units=${this.unitMeasure}`);
   }
-
-  getWeatherForWeekByCity(city: string): Observable<any> {
-    return this.httpClient.get(`${apiConfig.host}/weather?appid=${apiConfig.appId}&q=${city}&units=${this.unitMeasure}`);
-  }
-
 }

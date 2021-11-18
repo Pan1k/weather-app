@@ -12,6 +12,7 @@ import {
 import { HomeComponent, NotFoundComponent, AboutComponent } from './pages';
 import { BrandComponent } from './shared/elements/brand/brand.component';
 import { CopyrightComponent } from './shared/elements/copyright/copyright.component';
+import { HistoryComponent } from './pages/history/history.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CopyrightComponent } from './shared/elements/copyright/copyright.compon
     WeatherSettingsComponent,
     WeatherDailyComponent,
     WeatherWeeklyComponent,
-    WeatherInfoComponent
+    WeatherInfoComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
