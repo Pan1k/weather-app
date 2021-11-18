@@ -17,6 +17,10 @@
     }
 
     &:nth-child(3) {
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-top: 20px;
+
       span {
         text-align: right;
       }
@@ -60,5 +64,15 @@
   &__status {
     font-size: 14px;
     margin-top: 10px;
+  }
+
+  &__updated {
+
+    &--title {
+      display: inline-block;
+      margin-right: 5px;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
   }
 }

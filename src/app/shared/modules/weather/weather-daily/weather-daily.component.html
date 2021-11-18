@@ -1,9 +1,14 @@
 <div class="weather-daily">
   <div class="weather-daily__col"></div>
   <div class="weather-daily__col">
-    <span class="weather-daily__temp" data-deg="°" [attr.data-unit]="measureOfTemp">{{weather.main?.temp}}</span>
-    <span class="weather-daily__city">{{weather.name}}</span>
-    <span class="weather-daily__status">{{getWeatherStatus()}}</span>
+    <span class="weather-daily__temp" data-deg="°" [attr.data-unit]="measureOfTemp">{{weather.temp}}</span>
+    <span class="weather-daily__city">{{weather.city}}</span>
+    <span class="weather-daily__status">{{weather.description}}</span>
   </div>
-  <div class="weather-daily__col"></div>
+  <div class="weather-daily__col">
+    <span class="weather-daily__updated">
+      <span class="weather-daily__updated--title">last update at:</span>
+      <span class="weather-daily__updated--value">{{weather.updateAt | date: 'HH:mm:ss'}}</span>
+    </span>
+  </div>
 </div>

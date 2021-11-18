@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { apiConfig } from '../../../../app.confg';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-weather-weekly',
@@ -12,17 +13,20 @@ export class WeatherWeeklyComponent implements OnInit {
   @Input() unitMeasure: string;
 
   measureOfTemp: string;
+  weekWeather: any;
 
-  constructor() {
+  constructor(private weatherService: WeatherService) {
     this.city = '';
     this.unitMeasure = '';
     this.measureOfTemp = '';
+    this.weekWeather = weatherService.getWeatherForWeekByCity(this.city);
   }
 
   ngOnInit(): void {
     const measurementUnits = apiConfig.measurementUnits['metric'];
 
     this.measureOfTemp = measurementUnits.temperature;
+    console.log('weather weekly', this.weekWeather);
   }
 
 }

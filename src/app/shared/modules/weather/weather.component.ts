@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from './weather.service';
-import { IWeather } from '../../interfaces/weather.interface';
+import { IWeatherFormated } from '../../interfaces/weather.interface';
 import { appConfig } from '../../../app.confg';
 import { AppService } from '../../services/app.service';
+import { WEATHER_FORMATED } from '../../objects/weather.object';
 
 @Component({
   selector: 'app-weather',
@@ -12,14 +13,12 @@ import { AppService } from '../../services/app.service';
 export class WeatherComponent implements OnInit {
 
   private _weatherSubscription: any;
-  weather: IWeather;
+  weather: IWeatherFormated;
   unitMeasure: string;
 
   constructor(private weatherService: WeatherService, public appService: AppService) {
     this.unitMeasure = this.appService.getUnit();
-    this.weather = {
-      name: '',
-    };
+    this.weather = WEATHER_FORMATED;
   }
 
   ngOnInit(): void {
@@ -27,7 +26,7 @@ export class WeatherComponent implements OnInit {
       this.weatherService
         .getWeatherByCity(appConfig.defaultCity.name)
         .subscribe((weather: any) => {
-          this.weather = weather;
+          this.weather = this.weatherService.handleResponseWeatherData(weather);
           console.log(this.weather);
         });
   }

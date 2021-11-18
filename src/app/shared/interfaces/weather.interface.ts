@@ -2,7 +2,7 @@ export interface IWeather {
   base?: string;
   clouds?: any;
   cod?: number;
-  coord?: ICoord[];
+  coord?: ICoord;
   dt?: number;
   id?: number;
   main?: any;
@@ -11,7 +11,7 @@ export interface IWeather {
   timezone?: number;
   visibility?: number;
   weather?: Array<any>;
-  wind?: IWind[];
+  wind?: IWind;
 }
 
 interface ICoord {
@@ -31,4 +31,18 @@ interface ISys {
   sunrise: number;
   sunset: number;
   type: number;
+}
+
+export interface IWeatherFormated {
+  updateAt: number,
+  city: string,
+  temp: number,
+  humidity: number,
+  pressure: number,
+  description: string,
+  sunrise: number,
+  sunset: number,
+  windDirection: string,
+  windSpeed: number,
+  windBeaufortScale: string
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IWeather } from '../../../interfaces/weather.interface';
+import { IWeatherFormated } from '../../../interfaces/weather.interface';
 import { apiConfig } from '../../../../app.confg';
+import { WEATHER_FORMATED } from '../../../objects/weather.object';
 
 interface IUnits {
   temperature: string;
@@ -15,7 +16,7 @@ interface IUnits {
 })
 export class WeatherDailyComponent implements OnInit {
 
-  @Input() weather: IWeather;
+  @Input() weather: IWeatherFormated;
   @Input() unitMeasure: string;
 
   measureOfTemp: string;
@@ -27,9 +28,7 @@ export class WeatherDailyComponent implements OnInit {
     this.measureOfWindSpeed = '';
     this.measureOfPressure = '';
     this.unitMeasure = '';
-    this.weather = {
-      name: '',
-    }
+    this.weather = WEATHER_FORMATED;
   }
 
   ngOnInit() {
@@ -38,10 +37,6 @@ export class WeatherDailyComponent implements OnInit {
     this.measureOfTemp = measurementUnits.temperature;
     this.measureOfWindSpeed = measurementUnits.windSpeed;
     this.measureOfPressure = measurementUnits.pressure;
-  }
-
-  getWeatherStatus() {
-    return '';
   }
 
 }
